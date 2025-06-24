@@ -1,0 +1,234 @@
+        body {
+            background-image: url('${pageContext.request.contextPath}/cliente/vista/img/fondo_restaurante.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding-top: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            padding: 30px;
+            width: 95%;
+            max-width: 1200px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #d84315;
+            margin-bottom: 25px;
+            text-align: center;
+            opacity: 0.95;
+            font-size: 2.75rem;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .alert {
+            margin-bottom: 1.5rem;
+            padding: 1rem 1.5rem;
+            border-radius: 6px;
+            border: 1px solid transparent;
+        }
+
+        .alert-success {
+            color: #155724;
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+        }
+
+        .alert-danger {
+            color: #721c24;
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+        }
+
+        .toolbar {
+            display: flex;
+            justify-content: space-between; /* Cambiado para alinear el buscador a la derecha */
+            align-items: center; /* Alinea verticalmente los elementos */
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .toolbar-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .toolbar a.btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .toolbar a.btn-success {
+            background-color: #28a745;
+        }
+
+        .toolbar a.btn-success:hover {
+            background-color: #218838;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .toolbar a.btn-primary {
+            background-color: #007bff;
+        }
+
+        .toolbar a.btn-primary:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .table thead th {
+            background-color: #f8f9fa;
+            color: #555;
+            padding: 1.2rem 1.5rem;
+            text-align: left;
+            border-bottom: 2px solid #ddd;
+            font-weight: bold;
+            letter-spacing: 0.6px;
+        }
+
+        .table tbody td {
+            padding: 1.2rem 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .table tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .table tbody tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .table th:first-child,
+        .table td:first-child {
+            padding-left: 2rem;
+        }
+
+        .table th:last-child,
+        .table td:last-child {
+            padding-right: 2rem;
+            text-align: center;
+        }
+
+        .table-actions {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+
+        .table-actions a.btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.6rem 0.8rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .table-actions a.btn:hover {
+            opacity: 0.8;
+            transform: scale(1.05);
+        }
+
+        .table-actions a.btn-info {
+            background-color: #17a2b8;
+            color: white;
+        }
+
+        .table-actions a.btn-danger {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .back-button {
+            margin-top: 2.5rem;
+            text-align: center;
+        }
+
+        .back-button a.btn-dark {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            text-decoration: none;
+            background-color: #343a40;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-button a.btn-dark:hover {
+            background-color: #23272b;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Estilos para el buscador */
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-input {
+            padding: 0.75rem 1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            margin-left: 0.5rem; /* Ajusta el margen para la lupa */
+            font-size: 1rem;
+        }
+
+        .search-icon {
+            margin-right: 0.5rem; /* Ajusta el margen para la lupa */
+            color: #555; /* Color del icono */
+        }
+                            #background-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            background-size: cover;
+            overflow: hidden;
+        }

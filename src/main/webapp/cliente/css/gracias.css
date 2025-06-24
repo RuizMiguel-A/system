@@ -1,0 +1,105 @@
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333; /* Color de texto base */
+            background-color: #f8f9fa; /* Fallback color */
+        }
+
+        #background-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        .video-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4); /* Ajusta la transparencia para mejor legibilidad */
+            z-index: -99;
+        }
+
+        .gracias-container {
+            background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            animation: fadeIn 1s ease-out;
+            width: 80%;
+            max-width: 600px;
+            z-index: 1; /* Asegura que el contenedor esté sobre el video */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .gracias-title {
+            color: #28a745; /* Verde más vibrante */
+            margin-bottom: 30px;
+            font-size: 3em;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .gracias-message {
+            color: #555;
+            font-size: 1.3em;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .volver-link {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .volver-link:hover {
+            background-color: #0056b3;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Estilos responsivos para pantallas más pequeñas */
+        @media (max-width: 768px) {
+            .gracias-container {
+                padding: 30px;
+                width: 95%;
+            }
+
+            .gracias-title {
+                font-size: 2.5em;
+                margin-bottom: 20px;
+            }
+
+            .gracias-message {
+                font-size: 1.1em;
+                margin-bottom: 30px;
+            }
+
+            .volver-link {
+                padding: 12px 25px;
+                font-size: 1em;
+            }
+        }

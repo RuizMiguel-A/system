@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+<servlet>
+    <servlet-name>ClienteControladorServlet</servlet-name>
+    <servlet-class>com.edu.pe.controlador.ClienteControlador</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>ClienteControladorServlet</servlet-name>
+    <url-pattern>/ClienteControlador</url-pattern>
+</servlet-mapping>
+<servlet>
+    <servlet-name>ReservaControlador</servlet-name>
+    <servlet-class>com.edu.pe.controlador.ReservaControlador</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>ReservaControlador</servlet-name>
+    <url-pattern>/ReservaControlador</url-pattern>
+</servlet-mapping>
+<servlet>
+    <servlet-name>MenuControlador</servlet-name>
+    <servlet-class>com.edu.pe.controlador.MenuControlador</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>MenuControlador</servlet-name>
+    <url-pattern>/MenuControlador</url-pattern>
+</servlet-mapping>
+<servlet>
+    <servlet-name>VentaControlador</servlet-name>
+    <servlet-class>com.edu.pe.controlador.VentaControlador</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>VentaControlador</servlet-name>
+    <url-pattern>/VentaControlador</url-pattern>
+</servlet-mapping>
+
+
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>

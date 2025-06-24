@@ -1,0 +1,313 @@
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100; /* Ensures the video stays behind all content */
+    background-size: cover; /* Ensures the video covers the entire area */
+    overflow: hidden; /* Hides any overflow if the video is scaled */
+}
+
+body {
+    /* REMOVED: background-image and related properties, as the video now serves as the background */
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    position: relative; /* Needed for z-index context if you add more layers */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    width: 95%;
+    max-width: 1200px;
+    margin-bottom: 30px;
+    z-index: 1; /* Ensures the container is above the video */
+    position: relative; /* Ensures z-index works */
+}
+
+.header {
+    background-color: rgba(0, 86, 179, 0.85);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.logout-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    background-color: #dc3545;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logout-button:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+    padding: 30px;
+    background-color: transparent;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.table thead th {
+    background-color: #f8f9fa;
+    color: #555;
+    padding: 1.2rem 1.5rem;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+    font-weight: bold;
+    letter-spacing: 0.6px;
+}
+
+.table tbody td {
+    padding: 1.2rem 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.table th:first-child,
+.table td:first-child {
+    padding-left: 2rem;
+}
+
+.table th:last-child,
+.table td:last-child {
+    padding-right: 2rem;
+    text-align: center;
+}
+
+.table-actions {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.table-actions a.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.table-actions a.btn:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+.table-actions a.btn-info {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.table-actions a.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.toolbar-buttons {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.toolbar a.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.toolbar a.btn-info {
+    background-color: #17a2b8;
+}
+
+.toolbar a.btn-info:hover {
+    background-color: #138496;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.toolbar a.btn-success {
+    background-color: #28a745;
+}
+
+.toolbar a.btn-success:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.search-form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.search-form input[type="text"] {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 200px;
+}
+
+.search-form button {
+    padding: 0.75rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+    background-color: #0056b3;
+}
+
+.back-button {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+.back-button a.btn-dark {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    background-color: #343a40;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.back-button a.btn-dark:hover {
+    background-color: #23272b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .header h1 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+    .logout-button {
+        margin-top: 10px;
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+
+    .toolbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .toolbar a.btn {
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+
+    .table th, .table td {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    .table-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .table-actions a.btn {
+        width: 100%;
+        padding: 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    .back-button a.btn-dark {
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+}

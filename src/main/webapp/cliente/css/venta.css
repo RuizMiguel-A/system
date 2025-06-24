@@ -1,0 +1,204 @@
+        /* Estilos generales del body */
+        body {
+            background-image: url('cliente/vista/img/fondo_restaurante.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding-top: 30px; /* Más espacio superior */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        /* Contenedor principal del formulario */
+        .container {
+            background-color: rgba(255, 255, 255, 0.85); /* Fondo ligeramente transparente para legibilidad */
+            border-radius: 12px; /* Más redondeado */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+            padding: 30px; /* Más relleno */
+            width: 800px;
+            margin-bottom: 30px; /* Más margen inferior */
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Título principal de la tarjeta */
+        .card-title {
+            color: #d84315;
+            margin-bottom: 25px; /* Más espacio inferior */
+            text-align: center;
+            opacity: 0.95; /* Más opaco */
+            font-size: 2.5rem; /* Tamaño más grande */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra de texto */
+        }
+
+        /* Barra de navegación de pestañas */
+        .nav-tabs {
+            margin-bottom: 30px; /* Más espacio inferior */
+            display: flex;
+            justify-content: center;
+            border-bottom: 2px solid #ddd; /* Borde inferior más claro */
+        }
+
+        /* Enlaces de las pestañas */
+        .nav-item {
+            margin-right: 15px;
+        }
+
+        .nav-link {
+            color: #555;
+            text-decoration: none;
+            padding: 12px 18px; /* Más relleno */
+            border-bottom: 3px solid transparent; /* Borde inferior más grueso para la animación */
+            transition: color 0.3s ease, border-bottom-color 0.3s ease;
+            border-radius: 6px 6px 0 0; /* Esquinas superiores redondeadas */
+        }
+
+        .nav-link:hover {
+            color: #d84315;
+            border-bottom-color: #d84315;
+        }
+
+        /* Pestaña activa */
+        .nav-link.active {
+            color: #d84315;
+            border-bottom-color: #d84315;
+            background-color: #f8f9fa; /* Fondo ligeramente gris para la pestaña activa */
+        }
+
+        /* Título de la sección de detalles de pago */
+        h3 {
+            color: #333; /* Letras oscuras para el título */
+            margin-bottom: 20px;
+            text-align: center;
+            opacity: 0.9;
+            font-size: 1.8rem;
+        }
+
+        /* Línea horizontal */
+        hr {
+            border-top: 1px solid #eee;
+            margin-bottom: 25px;
+        }
+
+        /* Etiquetas de los formularios */
+        label {
+            color: #333; /* Letras oscuras para las etiquetas */
+            font-weight: bold;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        /* Campos de entrada de texto, email y teléfono */
+        .form-control {
+            background-color: #f8f9fa;
+            color: #333; /* Letras oscuras para el texto ingresado */
+            border: 1px solid #ccc;
+            border-radius: 6px; /* Más redondeado */
+            padding: 12px; /* Más relleno */
+            margin-bottom: 20px; /* Más espacio inferior */
+            box-sizing: border-box;
+            width: 100%;
+            font-size: 1.1rem; /* Tamaño de fuente más grande */
+        }
+
+        .form-control:focus {
+            border-color: #d84315;
+            box-shadow: 0 0 0 0.2rem rgba(216, 67, 21, 0.25); /* Efecto de foco */
+        }
+
+        /* Estilos para los botones */
+        .btn {
+            border: none;
+            padding: 15px 25px; /* Más relleno */
+            border-radius: 6px; /* Más redondeado */
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
+            opacity: 0.95;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px); /* Ligeramente elevado al pasar el ratón */
+        }
+
+        .btn:active {
+            transform: translateY(1px); /* Ligeramente presionado al hacer clic */
+        }
+
+        /* Botón primario (Guardar) */
+        .btn-primary {
+            background-color: #d84315;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #bf360c;
+        }
+
+        /* Botones oscuros (Volver Atrás, Siguiente) */
+        .btn-dark {
+            background-color: #343a40;
+            color: white;
+        }
+
+        .btn-dark:hover {
+            background-color: #1d2124;
+        }
+
+        /* Contenedor para los botones de navegación */
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .navigation-buttons a, .navigation-buttons button {
+            flex: 1;
+            margin: 0 5px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .navigation-buttons a:first-child, .navigation-buttons button:first-child {
+            margin-left: 0;
+        }
+
+        .navigation-buttons a:last-child, .navigation-buttons button:last-child {
+            margin-right: 0;
+        }
+
+        .input-group-text {
+            background-color: #e9ecef;
+            color: #495057;
+            border: 1px solid #ced4da;
+            border-radius: 6px 0 0 6px;
+            padding: 12px;
+        }
+
+        .input-group .form-control:not(:first-child):not(:last-child), .input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.invalid-tooltip) {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+                            #background-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            background-size: cover;
+            overflow: hidden;
+        }
+        
